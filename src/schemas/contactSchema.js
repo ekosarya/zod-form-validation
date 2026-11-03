@@ -5,7 +5,7 @@ export const contactSchema = z.object({
     .string()
     .min(2, { message: 'Name must be at least 2 characters long' })
     .max(50, { message: 'Name must not exceed 50 characters' }),
-  email: z.string().email({ message: 'Please enter a valid email address' }),
+  email: z.email({ message: 'Please enter a valid email address' }),
   phone: z.e164({
     message: 'Phone number must be in E.164 format (e.g., +628123456789)',
   }),
